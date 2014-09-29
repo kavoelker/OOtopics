@@ -18,6 +18,9 @@ class Vehicle(object):
 
     base_sale_price = 0
     wheels = 0
+    cost_of_repair = []
+    date_of_repair = []
+    num_repairs = 0
 
     def __init__(self, miles, make, model, year, sold_on):
         self.miles = miles
@@ -38,10 +41,21 @@ class Vehicle(object):
             return 0.0  # Not yet sold
         return self.base_sale_price - (.10 * self.miles)
         
-    def repair_cost(self):
+    def repair_cost(self, cost, date):
     """ set up local variables cost_of_repair, date_of_repair
     ... make these variables of type list so that each time 
-    ... a repair occurs, the fact can be retained.
+    ... a repair occurs, the fact can be retained."""
+        self.cost_of_repair = self.cost_of_repair + [cost]
+        self.date_of_repair = self.date_of_repar + [date]
+        self.num_repairs = self.num_repairs + 1
+        
+        i = self.num_repairs
+        for i > 0
+            print "Repair number" i
+            print "Repair cost = $" self.cost_of_repair[i]
+            print "Repair date " self.date_of_repair[i]
+        
+        
     
 
     @abstractmethod
